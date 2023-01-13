@@ -5,7 +5,7 @@ XTB offers free access to their API. The connection is made through TCP sockets.
 
 This plugin allows to connect to their API from Zorro. It was written in Win32 C++ under Visual Studio 2017.
 
-# Build Instructions
+## Build Instructions
 All dependencies have been fully integrated into the folder:
 
 - RapidJson (for JSON parsing and writing)
@@ -15,9 +15,9 @@ An old version of OpenSSL has been used to match the existing binary files withi
 
 This project includes a Visual Studio 2017 solution. You should be able to simply download the entire folder, open the solution, and build it, using the Release x86 build configuration.
 
-# Installation Instructions
+## Installation Instructions
 To install the plugin, simply place the binary file XTB.dll in the Plugin folder where Zorro is installed.
 
 
-# MIT License
+## MIT License
 This project is MIT-licensed. See the LICENSE.md file for more details.
