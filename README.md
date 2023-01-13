@@ -6,7 +6,7 @@ XTB offers free access to their API. The connection is made through sockets. Lin
 This plugin allows to connect to their API from Zorro. It was written in Win32 C++ under Visual Studio 2017.
 
 # Build Instructions
-All dependencies have been fully integrated into the folder. They are:
+All dependencies have been fully integrated into the folder:
 
 - RapidJson (for JSON parsing and writing)
 - OpenSSL (for secure socket connection)
