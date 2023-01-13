@@ -1,4 +1,6 @@
 # XTBZorroPlugin
+
+## Introduction
 XTB is a broker offering a large range of tradables instruments. For opening a demo account go to: https://www.xtb.com/en/demo-account.
 
 XTB offers free access to their API. The connection is made through TCP sockets. Link to API their documentation: http://developers.xstore.pro/documentation/#introduction.
@@ -18,6 +20,21 @@ This project includes a Visual Studio 2017 solution. You should be able to simpl
 ## Installation Instructions
 To install the plugin, simply place the binary file XTB.dll in the Plugin folder where Zorro is installed.
 
+## Plugin Description
+The following Broker API Zorro functions are implemented:
+- BrokerOpen
+- BrokerLogin
+- BrokerTime
+- BrokerAccount
+- BrokerAsset
+- BrokerBuy2
+- BrokerTrade
+- BrokerStop
+- BrokerSell2
+- BrokerCommand
+
+## Known Issues
+- Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
 
 ## MIT License
 This project is MIT-licensed. See the LICENSE.md file for more details.
