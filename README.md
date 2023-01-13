@@ -33,6 +33,8 @@ The following Broker API Zorro functions are implemented:
 - BrokerSell2
 - BrokerCommand
 
+BrokerHistory2 has not been implemented as XTB does not provide any historical data.
+
 ## Known Issues
 Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
 
