@@ -34,7 +34,7 @@ The following Broker API Zorro functions are implemented:
 - BrokerCommand
 
 ## Known Issues
-- Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
+Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
 
 ## MIT License
 This project is MIT-licensed. See the LICENSE.md file for more details.
