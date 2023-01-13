@@ -12,6 +12,7 @@ All dependencies have been fully integrated into the folder. They are:
 
 RapidJson (for JSON parsing and writing)
 OpenSSL (for secure socket connection)
+
 An old version of this library had been used to match the existing binaries inside Zorro and required by this library: libeay32.dll and ssleay32.dll.
 
 This project includes a Visual Studio 2017 solution. You should be able to simply download the entire folder, open the solution, and build it, using the Release x86 build configuration.
