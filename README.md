@@ -16,7 +16,7 @@ An old version of OpenSSL has been used to match the existing binaries within Zo
 This project includes a Visual Studio 2017 solution. You should be able to simply download the entire folder, open the solution, and build it, using the Release x86 build configuration.
 
 # Installation Instructions
-To install the plugin, simply place the AllyInvest.dll file in the Plugin folder where Zorro is installed.
+To install the plugin, simply place the binary XTB.dll in the Plugin folder where Zorro is installed.
 
 
 # MIT License
