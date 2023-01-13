@@ -10,8 +10,8 @@ This plugin allows to connect to their API from Zorro. It was written in Win32 C
 # Build Instructions
 All dependencies have been fully integrated into the folder. They are:
 
-RapidJson (for JSON parsing and writing)
-OpenSSL (for secure socket connection)
+- RapidJson (for JSON parsing and writing)
+- OpenSSL (for secure socket connection)
 
 An old version of this library had been used to match the existing binaries inside Zorro and required by this library: libeay32.dll and ssleay32.dll.
 
