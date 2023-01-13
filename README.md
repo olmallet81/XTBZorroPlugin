@@ -1,5 +1,5 @@
 # XTBZorroPlugin
-XTB is a broker offering a large range of tradables instruments\r. For opening a demo account go to: https://www.xtb.com/en/demo-account.
+XTB is a broker offering a large range of tradables instruments. For opening a demo account go to: https://www.xtb.com/en/demo-account.
 
 XTB offers free access to their API. The connection is made through sockets. Link to API documentation: http://developers.xstore.pro/documentation/#introduction.
 
@@ -15,4 +15,5 @@ An old version of OpenSSL has been used to match the existing binaries within Zo
 
 This project includes a Visual Studio 2017 solution. You should be able to simply download the entire folder, open the solution, and build it, using the Release x86 build configuration.
 
-
+# Installation Instructions
+To install the plugin, simply place the AllyInvest.dll file in the Plugin folder where Zorro is installed.
