@@ -35,7 +35,7 @@ The following Broker API Zorro functions are implemented:
 
 BrokerHistory2 has not been implemented as XTB does not provide any historical data.
 
-2 new commands have been added:
+2 new commands have been added to trading.h Zorro header file:
 - SET_LASTCONNECTION for setting the last connection date for getting all closed trades since the last connection
 - GET_TRADEPOSITION for getting the current position on a trade by its id.
 
