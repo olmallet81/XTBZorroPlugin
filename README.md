@@ -17,3 +17,7 @@ This project includes a Visual Studio 2017 solution. You should be able to simpl
 
 # Installation Instructions
 To install the plugin, simply place the AllyInvest.dll file in the Plugin folder where Zorro is installed.
+
+
+# MIT License
+This project is MIT-licensed. See the LICENSE.md file for more details.
