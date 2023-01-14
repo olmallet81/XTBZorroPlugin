@@ -48,12 +48,11 @@ The following commands have been implemented:
 - GET_POSITION
 - GET_AVGENTRY
 - GET_TRADES
-- SET_LASTCONNECTION (new command added for getting the current position on a trade by its id)
-- GET_TRADEPOSITION 
+- GET_TRADEPOSITION (new command added for getting the current position on a trade by its id)
 - GET_WAIT
 - SET_DELAY
 - SET_DIAGNOSTICS
-- SET_PATCH
+- SET_PATCH (returns 16 as rollover and commission computation are not implemented yet)
 - SET_WAIT
 - SET_LASTCONNECTION (new command added for setting the last connection date for getting all closed trades since the last connection)
 
