@@ -1,7 +1,7 @@
 # XTBZorroPlugin
 
 ## Introduction
-XTB is a low-commission broker offering a wide range of tradables instruments. For opening a demo account go to: https://www.xtb.com/en/demo-account.
+XTB is a low-commission broker offering a wide range of tradables instruments (nearly 2000). For opening a demo account go to: https://www.xtb.com/en/demo-account.
 
 XTB offers free access to their API. The connection is made through TCP sockets. Link to API their documentation: http://developers.xstore.pro/documentation/#introduction.
 
