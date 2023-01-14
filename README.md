@@ -34,10 +34,28 @@ The following Broker API Zorro functions are implemented:
 - BrokerCommand
 
 BrokerHistory2 has not been implemented as XTB does not provide any historical data.
-
-2 new commands have been added to trading.h Zorro header file:
-- SET_LASTCONNECTION for setting the last connection date for getting all closed trades since the last connection
-- GET_TRADEPOSITION for getting the current position on a trade by its id.
+  
+The following commands have been implemented:
+- GET_TIME
+- GET_DIGITS
+- GET_MINLOT
+- GET_LOTSTEP
+- GET_MAXLOT
+- GET_SERVERSTATE
+- GET_BROKERZONE
+- GET_DELAY
+- GET_NTRADES
+- GET_POSITION
+- GET_AVGENTRY
+- GET_TRADES
+- SET_LASTCONNECTION (new command added for getting the current position on a trade by its id)
+- GET_TRADEPOSITION 
+- GET_WAIT
+- SET_DELAY
+- SET_DIAGNOSTICS
+- SET_PATCH
+- SET_WAIT
+- SET_LASTCONNECTION (new command added for setting the last connection date for getting all closed trades since the last connection)
 
 ## Known Issues
 Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
