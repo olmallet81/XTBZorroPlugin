@@ -56,7 +56,6 @@ using namespace TCPTools;
 namespace XTB
 {
 	int(__cdecl *BrokerError)(const char* txt) = NULL;
-	int(__cdecl *BrokerProgress)(const int percent) = NULL;
 
 	struct Tick;
 	struct Balance;
@@ -76,7 +75,6 @@ namespace XTB
 	static int64_t LastTickTime;
 	static clock_t LastPingTime;
 	static int WaitPendingOrderFor = 1000; // in milliseconds
-	static bool Diagnostics = false;
 	static int64_t LastConnection = 0;
 	static std::mutex mtx;
 
@@ -603,7 +601,7 @@ namespace XTB
 		}
 
 		// manually opened trades in XTB => will be retrieved from Zorro with brokerTrades method
-			// doing it at the end to wait for all trade ids to be retrieved before generating new ones
+		// doing it at the end to wait for all trade ids to be retrieved before generating new ones
 		for (auto trade : newTrades)
 		{
 			auto id = GenerateTradeID();
@@ -677,7 +675,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in CloseStream: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 		}
 	}
 
@@ -719,7 +716,6 @@ namespace XTB
 							else if (!strcmp(command, "trade"))
 							{
 								TradeRecord* record = new TradeRecord(response["data"]);
-								Log(record->ToString());
 								std::lock_guard<std::mutex> lock(mtx);
 								CheckTradeRecord(record);
 							}
@@ -728,7 +724,6 @@ namespace XTB
 					catch (std::exception& ex)
 					{
 						Log("Exception caught in ReadStream: " + std::string(ex.what()));
-						if (Diagnostics) BrokerError(ex.what());
 					}
 				}
 			}
@@ -741,7 +736,6 @@ namespace XTB
 			Log("Streaming is closed.");
 
 			Log("Exception caught in ReadStream: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 		}
 	}
 
@@ -839,31 +833,5 @@ namespace XTB
 		}
 
 		return nb_opened;
-	}
-
-	void CheckNumberOfTrades()
-	{
-		auto nb_opened = 0;
-		auto nb_pending = 0;
-		auto nb_closed = 0;
-
-		for (const auto& trade : Trades)
-		{
-			auto record = trade.second->GetOpened();
-
-			if (trade.second->GetOpened())
-				nb_opened++;
-
-			if (trade.second->GetPending())
-				nb_pending++;
-
-			if (trade.second->GetClosed())
-				nb_closed++;
-			
-		}	
-
-		Log("Number of opened trades: " + std::to_string(nb_opened));
-		Log("Number of pending trades: " + std::to_string(nb_pending));
-		Log("Number of closed trades: " + std::to_string(nb_closed));
 	}
 }
