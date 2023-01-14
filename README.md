@@ -37,7 +37,7 @@ The following Broker API Zorro functions are implemented:
 
 BrokerHistory2 has not been implemented as XTB does not provide any historical data.
   
-#### Broker commands
+<#### Broker commands>
 The following commands have been implemented:
 - GET_TIME
 - GET_DIGITS
