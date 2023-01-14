@@ -21,6 +21,8 @@ This project includes a Visual Studio 2017 solution. You should be able to simpl
 To install the plugin, simply place the binary file XTB.dll in the Plugin folder where Zorro is installed.
 
 ## Plugin Description
+
+### Broker API functions
 The following Broker API Zorro functions are implemented:
 - BrokerOpen
 - BrokerLogin
@@ -35,6 +37,7 @@ The following Broker API Zorro functions are implemented:
 
 BrokerHistory2 has not been implemented as XTB does not provide any historical data.
   
+### Broker commands
 The following commands have been implemented:
 - GET_TIME
 - GET_DIGITS
@@ -55,6 +58,10 @@ The following commands have been implemented:
 - SET_WAIT
 - SET_LASTCONNECTION (new command added for setting the last connection date for getting all closed trades since the last connection)
 
+### Streaming 
+All streaming services (tick prices, balance and trades) run on another thread.
+
+### Log
 A log file is automatically generated at each connection to XTB and saved Zorro\Log\XTB folder.
 
 ## Known Issues
