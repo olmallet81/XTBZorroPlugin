@@ -51,10 +51,11 @@ The following commands have been implemented:
 - GET_TRADEPOSITION (new command added for getting the current position on a trade by its id)
 - GET_WAIT
 - SET_DELAY
-- SET_DIAGNOSTICS
 - SET_PATCH (returns 16 as rollover and commission computation are not implemented yet)
 - SET_WAIT
 - SET_LASTCONNECTION (new command added for setting the last connection date for getting all closed trades since the last connection)
+
+A log file is automatically generated at each connection to XTB and saved Zorro\Log\XTB folder.
 
 ## Known Issues
 Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
