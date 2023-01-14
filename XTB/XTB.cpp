@@ -585,12 +585,8 @@ namespace XTB
 					CommandTimeSpace = max((int)dwParameters, 200);
 				case SET_DIAGNOSTICS:
 				{
-					if ((int)dwParameters == 1 || (int)dwParameters == 0)
-					{
-						Diagnostics = (int)dwParameters;
-						return 1;
-					}
-					else return 0;
+					Diagnostics = (int)dwParameters == 1 ? 1 : 0;
+					return 1;
 				}
 				case SET_PATCH:
 				{
