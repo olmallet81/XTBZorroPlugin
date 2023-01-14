@@ -12,7 +12,6 @@ namespace XTB
 	{
 		strcpy_s(Name, 32, "XTB");
 		(FARPROC&)BrokerError = fpError;
-		(FARPROC&)BrokerProgress = fpProgress;
 
 		return PLUGIN_VERSION;
 	}
@@ -38,7 +37,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerLogin: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -72,7 +70,6 @@ namespace XTB
 		{
 			ConnectorAPI->Disconnect();
 			Log("Exception caught in BrokerTime: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -91,7 +88,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerAccount: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -129,7 +125,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerAsset: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}	
 	}
@@ -237,7 +232,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerBuy2: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -278,7 +272,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerTrade: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return NAY;
 		}
 	}
@@ -304,7 +297,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerStop: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -512,7 +504,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerSell2: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
@@ -583,11 +574,6 @@ namespace XTB
 					return WaitPendingOrderFor;
 				case SET_DELAY:
 					CommandTimeSpace = max((int)dwParameters, 200);
-				case SET_DIAGNOSTICS:
-				{
-					Diagnostics = (int)dwParameters == 1 ? 1 : 0;
-					return 1;
-				}
 				case SET_PATCH:
 				{
 					return 16; // rollover and commission
@@ -623,7 +609,6 @@ namespace XTB
 		catch (std::exception& ex)
 		{
 			Log("Exception caught in BrokerCommand: " + std::string(ex.what()));
-			if (Diagnostics) BrokerError(ex.what());
 			return 0;
 		}
 	}
