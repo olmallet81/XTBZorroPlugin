@@ -22,7 +22,7 @@ To install the plugin, simply place the binary file XTB.dll in the Plugin folder
 
 ## Plugin Description
 
-#### /Broker API functions:
+/#### Broker API functions:
 The following Broker API Zorro functions are implemented:
 - BrokerOpen
 - BrokerLogin
