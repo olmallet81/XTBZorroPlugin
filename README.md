@@ -22,7 +22,7 @@ To install the plugin, simply place the binary file XTB.dll in the Plugin folder
 
 ## Plugin Description
 
-#### <ins>Broker API functions</ins>
+#### <ins>Broker API Functions</ins>
 The following Broker API Zorro functions are implemented:
 - BrokerOpen
 - BrokerLogin
@@ -37,7 +37,7 @@ The following Broker API Zorro functions are implemented:
 
 BrokerHistory2 has not been implemented as XTB does not provide any historical data download service.
   
-#### <ins>Broker commands</ins>
+#### <ins>Broker Commands</ins>
 The following commands have been implemented:
 - GET_TIME
 - GET_DIGITS
@@ -61,7 +61,7 @@ The following commands have been implemented:
 #### <ins>Streaming</ins>
 All streaming services (tick prices, balance and trades) run on another thread.
 
-#### <ins>Log</ins>
+#### <ins>Log File</ins>
 A log file is automatically generated at each connection to XTB and dumped into the folder C:\Zorro\Log\XTB by default. To adjust this path to your own Zorro folder path, please modify the line 63 in the header file XTB.h.
 
 ## Known Issues
