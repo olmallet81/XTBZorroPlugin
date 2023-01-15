@@ -40,7 +40,7 @@
 #include "XTB/Responses.h"
 #include "XTB/Streaming.h"
 
-typedef double DATE;			// prerequisite for using trading.h
+typedef double DATE;		// prerequisite for using trading.h
 #include "include\trading.h"	// enter your path to trading.h (in your Zorro folder)
 
 #ifdef XTB_EXPORTS
