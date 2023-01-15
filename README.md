@@ -66,7 +66,7 @@ A log file is automatically generated at each connection to XTB and dumped into 
 
 ## Known Issues
 Limit/Stop orders to reduce or close a trade cannot be deleted if their size is greater than 50% of the trade size.
-Hence, the plugin has been implemented to cap these order to 50% of the trade current position otherwise the plugin would not be able to close a trade with such an order attached.
+Hence, this plugin has been implemented to cap limit/stop orders to 50% of the opened trade current position otherwise the plugin would not be able to close a trade with such an order attached.
 
 ## MIT License
 This project is MIT-licensed. See the LICENSE.md file for more details.
