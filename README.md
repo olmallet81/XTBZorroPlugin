@@ -65,7 +65,8 @@ All streaming services (tick prices, balance and trades) run on another thread.
 A log file is automatically generated at each connection to XTB and dumped into the Zorro\Log\XTB folder.
 
 ## Known Issues
-Limit/Stop orders to partially close a trade cannot be deleted if their size if greater than 50% of the trade total size.
+Limit/Stop orders to reduce or close a trade cannot be deleted if their size is greater than 50% of the main trade total size.
+Hence, the plugin has been implemented to cap these order to 50% of the trade current position otherwise the plugin would not be able to close a trade with such an order attached.
 
 ## MIT License
 This project is MIT-licensed. See the LICENSE.md file for more details.
