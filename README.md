@@ -62,7 +62,7 @@ The following commands have been implemented:
 All streaming services (tick prices, balance and trades) run on another thread.
 
 #### <ins>Log</ins>
-A log file is automatically generated at each connection to XTB and dumped into the Zorro\Log\XTB folder.
+A log file is automatically generated at each connection to XTB and dumped into the folder C:\Zorro\Log\XTB by default. To adjust this path to your own Zorro folder path, please modify the line 63 in the header file XTB.h.
 
 ## Known Issues
 Limit/Stop orders to reduce or close a trade cannot be deleted if their size is greater than 50% of the trade size.
