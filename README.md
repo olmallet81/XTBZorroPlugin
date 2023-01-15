@@ -59,7 +59,7 @@ The following commands have been implemented:
 - SET_LASTCONNECTION (new command added for setting the last connection date for getting all closed trades since the last connection)
 
 #### <ins>Streaming</ins>
-All streaming services (tick prices, balance and trades) run on another thread. The plugin will start this thread will start when the user will click on the Zorro Trade button and the plugin will wait for this thread to stop when clicking on Zorro Stop button.  
+All streaming services (tick prices, balance and trades) run on another thread.
 
 #### <ins>Log</ins>
 A log file is automatically generated at each connection to XTB and dumped into the Zorro\Log\XTB folder.
