@@ -18,7 +18,7 @@ An old version of OpenSSL has been used to match the existing binary files withi
 This project includes a Visual Studio 2017 solution. You should be able to simply download the entire folder, open the solution, and build it, using the Release x86 build configuration.
 
 ## Installation Instructions
-To install the plugin, simply place the binary file XTB.dll in the Plugin folder where Zorro is installed.
+To install the plugin, simply place the binary file XTB.dll in the Release folder (of the one in the Debug folder for debugging by attaching your Visual Studio to Zorro) in the Plugin folder where Zorro is installed.
 
 ## Plugin Description
 
